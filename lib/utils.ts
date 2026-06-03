@@ -1,6 +1,6 @@
 export { Socket } from "socket.io-client";
 
-export function noText(obj: any | null) {
+export function noText(obj: string | number | undefined | null): string | number | undefined | null {
   if (obj === undefined || obj === null) {
     return "-";
   }

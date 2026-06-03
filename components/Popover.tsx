@@ -38,14 +38,9 @@ type PopoverWidth = "auto" | "trigger" | "parent";
 type PopoverProps = {
   trigger: (api: PopoverApi) => ReactNode;
   child: ReactNode | ((api: PopoverApi) => ReactNode);
-
   placement?: PopoverPlacement;
   offset?: number;
   closeOnOutsideClick?: boolean;
-
-  /**
-   * Styling for the popover window.
-   */
   className?: string;
   width?: PopoverWidth;
 };
@@ -57,14 +52,15 @@ export function Popover({
   offset = 8,
   closeOnOutsideClick = true,
   className = "",
-  width = "parent"
+  width = "parent",
 }: PopoverProps) {
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const popoverRef = useRef<HTMLDivElement | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [style, setStyle] = useState<CSSProperties | null>(null);
-  const [mounted, setMounted] = useState(false);
+
+  const isBrowser = typeof document !== "undefined";
 
   const api = useMemo<PopoverApi>(
     () => ({
@@ -75,10 +71,6 @@ export function Popover({
     }),
     [isOpen]
   );
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useLayoutEffect(() => {
     if (!isOpen || !triggerRef.current) return;
@@ -108,7 +100,7 @@ export function Popover({
       window.removeEventListener("resize", updatePosition);
       window.removeEventListener("scroll", updatePosition, true);
     };
-  }, [isOpen, placement, offset]);
+  }, [isOpen, placement, offset, width]);
 
   useEffect(() => {
     if (!isOpen || !closeOnOutsideClick) return;
@@ -133,21 +125,13 @@ export function Popover({
 
   return (
     <>
-      <div ref={triggerRef}>
-        {trigger(api)}
-      </div>
+      <div ref={triggerRef}>{trigger(api)}</div>
 
-      {mounted &&
+      {isBrowser &&
         isOpen &&
         style &&
         createPortal(
-          <div
-            ref={popoverRef}
-            style={style}
-            className={
-              className ?? "z-50"
-            }
-          >
+          <div ref={popoverRef} style={style} className={className ?? "z-50"}>
             {typeof child === "function" ? child(api) : child}
           </div>,
           document.body

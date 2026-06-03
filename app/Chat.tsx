@@ -3,7 +3,6 @@ import { useRoomInfo } from "@/components/providers/RoomInfoProvider";
 import { useSocket } from "@/components/providers/SocketProvider";
 import { GameIO, MessageIO, ServerData } from "@/shared/socket-types";
 import { ui, uiPanel, uiGap, uiTitleWeak, uiTitle, uiBgSelected, uiRounded, uiTextTiny, uiGapItems, uiText } from "@/lib/styles";
-import { noText } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Scrollable } from "@/components/Scrollable";
 import { CLASS_TOKEN_MAP, StyledText } from "@/components/StyledText";
