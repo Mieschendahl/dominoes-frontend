@@ -1,0 +1,13 @@
+services:
+  dominoes-test-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dominoes-test-frontend
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
