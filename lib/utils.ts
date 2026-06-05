@@ -8,13 +8,11 @@ export function noText(obj: string | number | undefined | null): string | number
 }
 
 export function getInviteUrl(currentUrl: string): string {
-  const { origin, pathname, searchParams } = new URL(currentUrl);
+  const url = new URL(currentUrl);
 
-  const roomParam = searchParams.get("room");
+  const room = url.searchParams.get("room");
 
-  const basePath = pathname.slice(0, pathname.lastIndexOf("/") + 1);
-
-  return roomParam
-    ? `${origin}${basePath}?room=${encodeURIComponent(roomParam)}`
-    : `${origin}${basePath}`;
+  return room
+    ? `${url.origin}${url.pathname}?room=${encodeURIComponent(room)}`
+    : `${url.origin}${url.pathname}`;
 }

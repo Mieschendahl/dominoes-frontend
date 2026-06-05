@@ -15,6 +15,7 @@ export const uiBgHoverDisable = ui(`hover:bg-white/5`);
 export const uiBgFocus = ui("focus:bg-white/10");
 export const uiP = ui("px-3 py-2");
 export const uiGap = ui("gap-x-2 gap-y-2");
+export const uiGapText = ui("gap-x-3 gap-y-2");
 export const uiGapItems = ui("gap-2");
 export const uiRounded = ui("rounded-lg");
 export const uiPanel = ui(uiRounded, uiP, uiBg);
