@@ -63,7 +63,7 @@ export function Chat() {
                             case "user":
                                 const { userId, text: text_ } = data;
                                 label = userId;
-                                color = CLASS_TOKEN_MAP["blue"];
+                                color = CLASS_TOKEN_MAP["yellow"];
                                 text = text_;
                                 break;
                         }

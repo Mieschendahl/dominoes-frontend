@@ -141,10 +141,9 @@ export function HandPanel() {
             onClick={() => setSelectedDomino(undefined)}
         >
             <div className={ui("flex justify-between", uiGap)}>
-                <span className={ui(uiTitle, "flex-1 text-start")}>{isActivePlayer ? "active" : ""}</span>
+                <span className={ui(uiTitle, "flex-1 text-start")}>{isActivePlayer ? "active" : "inactive"}</span>
                 <span className={ui(uiTitleWeak, "flex-1 text-center")}>Hand</span>
                 <div className={ui("flex-1")}></div>
-
             </div>
 
             <Scrollable stickToEdge x className={ui("flex-1")}>
