@@ -68,7 +68,7 @@ export function Chat() {
                                 break;
                         }
                         return (
-                            <div className={ui("flex flex-col", uiPanel, "text-justify")} key={index}>
+                            <div className={ui("flex flex-col", uiPanel, "text-center")} key={index}>
                                 <div className={ui(uiTextTiny, color)}>
                                     {label}
                                 </div>
