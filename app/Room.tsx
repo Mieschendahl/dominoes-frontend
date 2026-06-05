@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Button } from "@/components/Basics";
+import { Button } from "@/components/Button";
 import { useRoomInfo } from "@/components/providers/RoomInfoProvider";
 import { useNotification } from "@/components/providers/NotificationProvider";
 import { getInviteUrl } from "@/lib/utils";

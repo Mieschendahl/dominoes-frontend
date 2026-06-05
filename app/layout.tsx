@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Background } from "@/components/Basics";
+import { Background } from "@/components/Background";
 import { Providers } from "@/components/Providers";
 import "overlayscrollbars/styles/overlayscrollbars.css";
 import { ui } from "@/lib/styles";

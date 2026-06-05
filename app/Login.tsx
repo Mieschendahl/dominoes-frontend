@@ -7,7 +7,7 @@ import { useDialog } from "@/components/providers/DialogProvider";
 import { useRouter } from "next/navigation";
 import { useRoomInfo } from "@/components/providers/RoomInfoProvider";
 import { ui, uiNotification, uiIcon, uiGap, uiTitle, uiInput, uiTextTiny, uiPanel, uiBigPanel } from "@/lib/styles";
-import { Button } from "@/components/Basics";
+import { Button } from "@/components/Button";
 import { StyledText } from "@/components/StyledText";
 
 export const LOGIN_KEY = "room login";

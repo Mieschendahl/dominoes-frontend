@@ -1,4 +1,4 @@
-import { Button } from "@/components/Basics";
+import { Button } from "@/components/Button";
 import { useRoomInfo } from "@/components/providers/RoomInfoProvider";
 import { useSocket } from "@/components/providers/SocketProvider";
 import { GameIO, MessageIO, ServerData } from "@/shared/socket-types";

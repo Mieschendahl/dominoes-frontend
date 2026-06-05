@@ -1,4 +1,4 @@
-import { Button } from "@/components/Basics";
+import { Button } from "@/components/Button";
 import { DominoSVG } from "@/components/domino/domino";
 import { useGame } from "@/components/providers/GameProvider";
 import { useRoomInfo } from "@/components/providers/RoomInfoProvider";
