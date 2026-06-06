@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: process.env.BASE_PATH,
+  basePath: "/dominoes",
 };
 
 export default nextConfig;
