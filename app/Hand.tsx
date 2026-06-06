@@ -143,7 +143,7 @@ export function HandPanel() {
             <div className={ui("flex justify-between", uiGap)}>
                 <div className={ui("flex-1")}></div>
                 <span className={ui(uiTitleWeak, "flex-1 text-center")}>Hand</span>
-                <span className={ui(uiTitle, "flex-1 text-end")}>{isActivePlayer ? "active" : "inactive"}</span>
+                <span className={ui(uiTitle, "flex-1 text-end")}>{isActiveGame ? isActivePlayer ? "active" : "inactive" : ""}</span>
             </div>
 
             <Scrollable stickToEdge x className={ui("flex-1")}>

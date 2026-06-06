@@ -24,7 +24,7 @@ export default function Main() {
 
   return (
     <div className={ui("w-dvw h-dvh grid place-items-center", uiP)}>
-      <div className={ui("flex justify-center min-h-0 h-full w-200", uiGap)}>
+      <div className={ui("flex justify-center min-h-150 h-full w-200", uiGap)}>
         <div className={ui("flex-1 flex flex-col", uiGap, "overflow-hidden justify-end")}>
           <Room></Room>
           <Chat></Chat>
