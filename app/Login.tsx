@@ -44,7 +44,7 @@ export function Login() {
   }
 
   return (
-    <div className={ui("flex flex-col min-w-100 max-w-100 items-center", uiGap, uiBigPanel)}>
+    <div className={ui("flex flex-col min-w-50 items-center", uiGap, uiBigPanel)}>
       <div className={"flex flex-col items-center"}>
         <div className={uiTitle}>
           <StyledText value="Welcome to $tyle{blue}{Dominoes}" />

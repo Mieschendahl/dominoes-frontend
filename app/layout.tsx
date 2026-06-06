@@ -29,9 +29,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      // style={{
+      //   fontSize: "min(dvh, dvw)",
+      // }}
     >
-      <body className={ui("h-full overflow-hidden")}>
+      {/* <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head> */}
+      <body>
         <Background />
         <Providers>
           {children}

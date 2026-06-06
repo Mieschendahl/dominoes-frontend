@@ -51,25 +51,25 @@ export function Chat() {
             <Scrollable stickToEdge y className={ui("flex-1")}>
                 <div className={ui("flex flex-col justify-start", uiGap)}>
                     {messages.map(({ kind, data }, index) => {
-                        let color;
+                        let style;
                         let label;
                         let text;
                         switch (kind) {
                             case "system":
                                 label = "System";
-                                color = CLASS_TOKEN_MAP["gray"]
+                                style = CLASS_TOKEN_MAP["grey"];
                                 text = data;
                                 break;
                             case "user":
                                 const { userId, text: text_ } = data;
                                 label = userId;
-                                color = CLASS_TOKEN_MAP["white"];
+                                style = CLASS_TOKEN_MAP["grey"] + " " + CLASS_TOKEN_MAP["italic"];
                                 text = text_;
                                 break;
                         }
                         return (
                             <div className={ui("flex flex-col", uiPanel, "text-center")} key={index}>
-                                <div className={ui(uiTextTiny, color)}>
+                                <div className={ui(uiTextTiny, style)}>
                                     {label}
                                 </div>
                                 {text.map((t, i) => {

@@ -73,7 +73,7 @@ export function Players() {
     const activePlayerUserId = game.activePlayerIndex === undefined ? undefined : game.players[game.activePlayerIndex].userId;
 
     return (
-        <div className={ui(uiPanel, "flex-1 flex flex-col", uiGap, "justify-between")}>
+        <div className={ui(uiPanel, "flex flex-col", uiGap, "justify-between")}>
             <div className={ui("grid grid-cols-3", uiGap)}>
                 <div className={ui(uiTitleWeak, "text-center")}>
                     Player

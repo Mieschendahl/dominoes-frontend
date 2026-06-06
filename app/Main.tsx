@@ -23,27 +23,23 @@ export default function Main() {
   }, [roomId, userId, openDialog]);
 
   return (
-    <div className={ui("min-h-full w-max min-w-full max-h-screen flex items-stretch justify-between", uiP)}>
-      <div></div>
-      <div className={ui("flex min-w-400 max-w-400 justify-center min-h-300", uiGap)}>
+    <div className={ui("w-dvw h-dvh grid place-items-center", uiP)}>
+      <div className={ui("flex justify-center min-h-0 h-full w-200", uiGap)}>
         <div className={ui("flex-1 flex flex-col", uiGap, "overflow-hidden justify-end")}>
           <Room></Room>
           <Chat></Chat>
-          <div className={ui("min-h-100 flex flex-col", uiGap)}>
-            <Stats></Stats>
-            <Players></Players>
-          </div>
+          <Stats></Stats>
+          <Players></Players>
         </div>
         <div className={ui("flex-2 flex flex-col", uiGap, "overflow-hidden")}>
-          <div className={ui("flex-1 flex items-stretch", uiGap)}>
+          <div className={ui("flex-1 flex items-stretch min-h-0 h-full", uiGap)}>
             <BoardPanel></BoardPanel>
           </div>
-          <div className={ui("min-h-100 max-h-100 flex items-stretch")}>
+          <div className={ui("flex items-stretch h-45")}>
             <HandPanel></HandPanel>
           </div>
         </div>
       </div>
-      <div></div>
     </div>
   );
 }
