@@ -7,7 +7,7 @@ import {
 export type AppSocket = Socket<ServerToClientEvents, ClientToServerEvents>;
 
 export const socket: AppSocket = io("http://localhost:4000", {
-  path: "/dominoes",
+  path: "/dominoes/api",
   autoConnect: false,
   reconnection: true,
   reconnectionAttempts: Infinity,
