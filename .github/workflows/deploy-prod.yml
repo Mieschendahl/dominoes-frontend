@@ -18,5 +18,5 @@ jobs:
           script: |
             cd /opt/dominoes/prod/frontend
             git pull origin prod
-            docker compose up -d --build
+            docker compose up -d --build dominoes-prod-frontend
             docker compose ps
