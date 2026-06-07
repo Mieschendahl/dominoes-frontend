@@ -3,7 +3,20 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        BUILD_SCRIPT: build:test
     container_name: dominoes-test-frontend
+    restart: unless-stopped
+    networks:
+      - web
+
+  dominoes-prod-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_SCRIPT: build:prod
+    container_name: dominoes-prod-frontend
     restart: unless-stopped
     networks:
       - web

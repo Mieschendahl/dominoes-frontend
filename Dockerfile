@@ -9,7 +9,8 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN pnpm build
+ARG BUILD_SCRIPT
+RUN pnpm run $BUILD_SCRIPT
 
 EXPOSE 3000
 

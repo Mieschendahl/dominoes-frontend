@@ -2,14 +2,23 @@
   "name": "web-server",
   "version": "0.1.0",
   "private": true,
+
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
-    "start": "next start -p 3000",
-    "lint": "eslint",
-    "check": "pnpm lint && pnpm build",
+    "check": "eslint",
     "push-test": "git push origin develop && git checkout test && git merge develop && git push && git checkout develop",
-    "push-prod": "git push origin develop && git checkout prod && git merge test && git push && git checkout develop"
+    "push-prod": "git push origin develop && git checkout prod && git merge test && git push && git checkout develop",
+
+    "dev": "NEXT_PUBLIC_STAGE=local next dev -p 3000",
+    
+    "build": "next build",
+    "build:local": "NEXT_PUBLIC_STAGE=local pnpm build",
+    "build:test": "NEXT_PUBLIC_STAGE=test pnpm build",
+    "build:prod": "NEXT_PUBLIC_STAGE=prod pnpm build",
+
+    "start": "next start -p 3000",
+    "run:local": "pnpm build:local && pnpm start",
+    "run:test": "pnpm build:test && pnpm start",
+    "run:prod": "pnpm build:prod && pnpm start"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
