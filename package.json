@@ -4,7 +4,6 @@
   "private": true,
 
   "scripts": {
-    "check": "eslint",
     "push-test": "git push origin develop && git checkout test && git merge develop && git push && git checkout develop",
     "push-prod": "git push origin develop && git checkout prod && git merge test && git push && git checkout develop",
 
