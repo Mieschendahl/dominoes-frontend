@@ -9,7 +9,7 @@
     "lint": "eslint",
     "check": "pnpm lint && pnpm build",
     "push-test": "git checkout test && git merge develop && git push && git checkout develop",
-    "push-main": "git checkout main && git merge test && git push && git checkout develop"
+    "push-prod": "git checkout prod && git merge test && git push && git checkout develop"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
