@@ -34,9 +34,9 @@ export default function RootLayout({
       //   fontSize: "min(dvh, dvw)",
       // }}
     >
-      {/* <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head> */}
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body>
         <Background />
         <Providers>
