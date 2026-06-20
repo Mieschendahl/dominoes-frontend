@@ -24,7 +24,7 @@ export default function Main() {
 
   return (
     <div className={ui("w-lvw h-lvh grid place-items-center")}>
-      <div className={ui("flex justify-center min-h-150 h-full w-200 py-4", uiGap)}>
+      <div className={ui("flex justify-center h-full min-h-150 w-200 p-5", uiGap)}>
         <div className={ui("flex-1 flex flex-col", uiGap, "overflow-hidden justify-end")}>
           <Room></Room>
           <Chat></Chat>
@@ -35,7 +35,7 @@ export default function Main() {
           <div className={ui("flex-1 flex items-stretch min-h-0 h-full", uiGap)}>
             <BoardPanel></BoardPanel>
           </div>
-          <div className={ui("flex items-stretch h-45")}>
+          <div className={ui("flex items-stretch")}>
             <HandPanel></HandPanel>
           </div>
         </div>
