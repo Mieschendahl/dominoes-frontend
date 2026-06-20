@@ -35,7 +35,7 @@ export default function Main() {
           <div className={ui("flex-1 flex items-stretch min-h-0 h-full", uiGap)}>
             <BoardPanel></BoardPanel>
           </div>
-          <div className={ui("flex items-stretch")}>
+          <div className={ui("flex items-stretch h-45")}>
             <HandPanel></HandPanel>
           </div>
         </div>
