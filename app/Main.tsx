@@ -23,8 +23,8 @@ export default function Main() {
   }, [roomId, userId, openDialog]);
 
   return (
-    <div className={ui("w-lvw h-svh grid place-items-center", uiP)}>
-      <div className={ui("flex justify-center min-h-150 h-full w-200", uiGap)}>
+    <div className={ui("w-lvw h-lvh grid place-items-center")}>
+      <div className={ui("flex justify-center min-h-150 h-full w-200 py-4", uiGap)}>
         <div className={ui("flex-1 flex flex-col", uiGap, "overflow-hidden justify-end")}>
           <Room></Room>
           <Chat></Chat>
