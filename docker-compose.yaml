@@ -1,3 +1,5 @@
+name: domino-frontend
+
 services:
   dominoes-test-frontend:
     build:
